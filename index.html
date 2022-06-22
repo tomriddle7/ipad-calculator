@@ -8,77 +8,84 @@
     <link rel="stylesheet" href="./style.css">
     <script defer src="./script.js"></script>
 </head>
+
 <body>
-    <div class="row">
-        <div class="col flex-center">
-           <div class="main-content">
-                <header>
-                    <h1>iOS-like Calculator</h1>
-                </header>
-
-                <main>
-                    <p>
-                        This is a practice project in which I try to replicate iOS calculator's both logic and styling.
-                        <br>
-                        <br>
-                        You can see the code for this project <a target="_blank" href="https://github.com/erekkles/ios-calculator-js">in GitHub</a> 
-                        <br>
-                        <br>
-                        In case you spot room for improvement, feel free to let me know or to open a pull request with your implementation!
-                    </p>
-                </main>
-
-                <hr>
-                <section>
-                    <h2>How to use</h2>
-                    <ul>
-                        <li><span>AC or C</span> &nbsp; Clear the last input</li>
-                        <li><span>+/-</span> &nbsp; Assign the additive inverse</li>
-                        <li><span>%</span> &nbsp; Find the 1% of the last input</li>
-                        <li><span>÷</span> &nbsp; Division operator</li>
-                        <li><span>x</span> &nbsp; Multiplication operator</li>
-                        <li><span>-</span> &nbsp; Minus operator</li>
-                        <li><span>+</span> &nbsp; Plus operator</li>
-                        <li><span>=</span> &nbsp; Equals operator</li>
-                    </ul>
-                </section>
-           </div>
+    <div class="calculator">
+        <div class="screen">
+            0
         </div>
-        <div class="col flex-center">
-            <div class="calculator">
-                <div class="screen">
-                    0
+        <div class="row">
+            <div class="keyboard aspect">
+                <div class="row">
+                    <div class="sub-col" data-button-type="operator" data-value="(">(</div>
+                    <div class="sub-col" data-button-type="operator" data-value=")">)</div>
+                    <div class="sub-col" data-button-type="operator" data-value="mc">mc</div>
+                    <div class="sub-col" data-button-type="operator" data-value="m+">m+</div>
+                    <!-- <div class="sub-col" data-button-type="operator" data-value="m-">m-</div>
+                    <div class="sub-col" data-button-type="operator" data-value="mr">mr</div> -->
                 </div>
-                <div class="keyboard">
-                    <div class="row">
-                        <div class="sub-col" data-button-type="operator" data-value="clear" id="clear_button">AC</div>
-                        <div class="sub-col" data-button-type="operator" data-value="+/-">+/-</div>
-                        <div class="sub-col" data-button-type="operator" data-value="%">%</div>
-                        <div class="sub-col" data-button-type="operator" data-value="/">÷</div>
-                    </div>
-                    <div class="row">
-                        <div class="sub-col" data-button-type="digit" data-value="7">7</div>
-                        <div class="sub-col" data-button-type="digit" data-value="8">8</div>
-                        <div class="sub-col" data-button-type="digit" data-value="9">9</div>
-                        <div class="sub-col" data-button-type="operator" data-value="*">x</div>
-                    </div>
-                    <div class="row">
-                        <div class="sub-col" data-button-type="digit" data-value="4">4</div>
-                        <div class="sub-col" data-button-type="digit" data-value="5">5</div>
-                        <div class="sub-col" data-button-type="digit" data-value="6">6</div>
-                        <div class="sub-col" data-button-type="operator" data-value="-">-</div>
-                    </div>
-                    <div class="row">
-                        <div class="sub-col" data-button-type="digit" data-value="1">1</div>
-                        <div class="sub-col" data-button-type="digit" data-value="2">2</div>
-                        <div class="sub-col" data-button-type="digit" data-value="3">3</div>
-                        <div class="sub-col" data-button-type="operator" data-value="+">+</div>
-                    </div>
-                    <div class="row">
-                        <div class="sub-col" data-button-type="digit" data-value="0">0</div>
-                        <div class="sub-col" data-button-type="digit" data-value=".">,</div>
-                        <div class="sub-col" data-button-type="operator" data-value="=">=</div>
-                    </div>
+                <div class="row">
+                    <div class="sub-col" data-button-type="operator" data-value="2nd">2nd</div>
+                    <div class="sub-col" data-button-type="operator" data-value="x2">x2</div>
+                    <div class="sub-col" data-button-type="operator" data-value="x3">x3</div>
+                    <div class="sub-col" data-button-type="operator" data-value="xy">xy</div>
+                    <!-- <div class="sub-col" data-button-type="operator" data-value="ex">ex</div>
+                    <div class="sub-col" data-button-type="operator" data-value="10x">10x</div> -->
+                </div>
+                <div class="row">
+                    <div class="sub-col" data-button-type="operator" data-value="1/x">1/x</div>
+                    <div class="sub-col" data-button-type="operator" data-value="1/2x">1/2x</div>
+                    <div class="sub-col" data-button-type="operator" data-value="1/3x">1/3x</div>
+                    <div class="sub-col" data-button-type="operator" data-value="1/yx">1/yx</div>
+                    <!-- <div class="sub-col" data-button-type="operator" data-value="ln">ln</div>
+                    <div class="sub-col" data-button-type="operator" data-value="log10">log10</div> -->
+                </div>
+                <div class="row">
+                    <div class="sub-col" data-button-type="operator" data-value="x!">x!</div>
+                    <div class="sub-col" data-button-type="operator" data-value="sin">sin</div>
+                    <div class="sub-col" data-button-type="operator" data-value="cos">cos</div>
+                    <div class="sub-col" data-button-type="operator" data-value="tan">tan</div>
+                    <!-- <div class="sub-col" data-button-type="digit" data-value="e">e</div>
+                    <div class="sub-col" data-button-type="digit" data-value="EE">EE</div> -->
+                </div>
+                <div class="row">
+                    <div class="sub-col" data-button-type="operator" data-value="Rad">Rad</div>
+                    <div class="sub-col" data-button-type="operator" data-value="sinh">sinh</div>
+                    <div class="sub-col" data-button-type="operator" data-value="cosh">cosh</div>
+                    <!-- <div class="sub-col" data-button-type="operator" data-value="tanh">tanh</div>
+                    <div class="sub-col" data-button-type="digit" data-value="π">π</div>
+                    <div class="sub-col" data-button-type="digit" data-value="Rand">Rand</div> -->
+                </div>
+            </div>
+            <div class="keyboard">
+                <div class="row">
+                    <div class="sub-col" data-button-type="operator" data-value="clear" id="clear_button">AC</div>
+                    <div class="sub-col" data-button-type="operator" data-value="+/-">+/-</div>
+                    <div class="sub-col" data-button-type="operator" data-value="%">%</div>
+                    <div class="sub-col" data-button-type="operator" data-value="/">÷</div>
+                </div>
+                <div class="row">
+                    <div class="sub-col" data-button-type="digit" data-value="7">7</div>
+                    <div class="sub-col" data-button-type="digit" data-value="8">8</div>
+                    <div class="sub-col" data-button-type="digit" data-value="9">9</div>
+                    <div class="sub-col" data-button-type="operator" data-value="*">x</div>
+                </div>
+                <div class="row">
+                    <div class="sub-col" data-button-type="digit" data-value="4">4</div>
+                    <div class="sub-col" data-button-type="digit" data-value="5">5</div>
+                    <div class="sub-col" data-button-type="digit" data-value="6">6</div>
+                    <div class="sub-col" data-button-type="operator" data-value="-">-</div>
+                </div>
+                <div class="row">
+                    <div class="sub-col" data-button-type="digit" data-value="1">1</div>
+                    <div class="sub-col" data-button-type="digit" data-value="2">2</div>
+                    <div class="sub-col" data-button-type="digit" data-value="3">3</div>
+                    <div class="sub-col" data-button-type="operator" data-value="+">+</div>
+                </div>
+                <div class="row">
+                    <div class="sub-col" data-button-type="digit" data-value="0">0</div>
+                    <div class="sub-col" data-button-type="digit" data-value=".">,</div>
+                    <div class="sub-col" data-button-type="operator" data-value="=">=</div>
                 </div>
             </div>
         </div>
